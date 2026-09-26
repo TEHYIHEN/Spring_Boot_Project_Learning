@@ -15,3 +15,13 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
     //boolean existsByEmailAndIdNot(@Param("email") String email, @Param("id") UUID id);
     boolean existsByEmailAndIdNot(String email, UUID id);
 }
+
+//For Example  existsByEmailAndIdNot
+//const exists = await prisma.user.findFirst({
+//  where: {
+//    email,
+//    id: {
+//      not: id,
+//    },
+//  },
+//}) !== null;

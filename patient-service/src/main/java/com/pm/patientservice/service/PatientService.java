@@ -94,4 +94,11 @@ public class PatientService {
         Patient updatePatient = patientRepository.save(patient);
         return PatientMapper.toDTO(updatePatient);
     }
+
+    //why using void here,
+    //because no need to response
+    //204 No content
+    public void deletePatient(UUID id) {
+        patientRepository.deleteById(id);
+    }
 }
